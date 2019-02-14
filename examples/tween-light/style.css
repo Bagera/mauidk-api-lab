@@ -1,0 +1,22 @@
+body {
+  background-color: #000;
+}
+#demo {
+  width: 692px;
+  height: 60px;
+  background-color: #333;
+  padding: 8px;
+}
+#easeWrapper {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  border-right: 1px dashed #ccc;
+  border-left: 1px dashed #ccc;
+}
+#logo {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(logo_black.jpg) no-repeat;
+}
