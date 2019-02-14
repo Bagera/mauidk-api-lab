@@ -12,3 +12,4 @@ We are exploring APIs for our programming 2 course and we have chosen [GreenSock
 ## Examples
 
 - First example is moving button in `examples/moving-button`
+- Secont example is a staggered animation in `examples/staggered`
