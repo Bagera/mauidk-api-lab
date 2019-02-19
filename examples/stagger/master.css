@@ -1,0 +1,132 @@
+html, body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 100vh;
+}
+
+body {
+     background-color: #000000;
+     background-size: cover;
+}
+
+h1 {
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: #fff;
+     font-size: 48px;
+     font-family: Poppins;
+     font-weight: lighter;
+}
+h2 {
+     position: absolute;
+     top: 38%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: #fff;
+     font-size: 25px;
+     font-family: Poppins;
+     font-weight: lighter;
+}
+
+
+
+.menu {
+     z-index: 0;
+     position: absolute;
+     background: #101010;
+     height: 100vh;
+     width: 100%;
+     top: -100%;
+}
+
+.data {
+     padding: 8em 0 0 2em;
+     text-align: left;
+}
+
+ul {
+     list-style: none;
+}
+
+li:first-child {
+     color: grey;
+     font-family: Poppins;
+     font-size: 24px;
+}
+
+li:not(:first-child) {
+     color: #fff;
+     font-size: 42px;
+}
+
+a {
+     text-decoration: none;
+     color: #fff;
+     font-family: Poppins;
+}
+
+a.btn-custom{
+     position: absolute;
+	color:#FFF;
+	text-decoration:none;
+}
+.btn-custom{
+	color:#FFF;
+	letter-spacing:4px;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-align:center;
+	font-size:11px;
+	font-weight:400;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	line-height:1em;
+	padding:17px 32px;
+	position:relative;
+	z-index:5;
+	background:transparent;
+	border:none;
+}
+
+.btn-custom:before{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:2;
+	border:solid 1px #FFF;
+	border-color:rgba(255,255,255,.8);
+}
+.btn-custom:hover:after{
+	opacity:1;
+	visibility:visible;
+}
+.btn-custom.btn-color:after{
+	background:#000000;
+}
+.btn-custom.btn-color:hover:after{
+	opacity:.4;
+}
+.btn-custom.btn-color{
+	color:#202020;
+}
+.btn-custom.btn-color > span:before,
+.btn-custom.btn-color > span:after{
+	background:rgba(0,0,0,.2);
+}
+.btn-custom.btn-color:before{
+	border-color:rgba(0,0,0,.2);
+}
+
+.wrapper {
+     position: absolute;
+     top: 50%;
+     left: 46%;
+     transform: translate(-50%, -50%);
+ }
