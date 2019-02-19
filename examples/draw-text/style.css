@@ -1,0 +1,58 @@
+body {
+  background-color: slategrey;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.greensock,
+.track {
+  width: 50%;
+}
+
+.greensock-text {
+  fill: none;
+  stroke: #37c45f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6px;
+}
+
+.track {
+  height: 1em;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-bottom: 3em;
+}
+.track-completion {
+  width: 0%;
+  height: 100%;
+  background-color: bisque;
+}
+
+button {
+  font-size: 2em;
+  display: inline-block;
+  min-width: 3em;
+  background-color: transparent;
+  border: none;
+  padding: 0.4em 0.5em 0.6em;
+  background-color: rgba(0, 0, 0, 0.25);
+  line-height: 1;
+  border-radius: 1em;
+  font-weight: 700;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: bisque;
+}
+button.active {
+  color: bisque;
+}
+
+.easing {
+  margin-top: 2em;
+}
