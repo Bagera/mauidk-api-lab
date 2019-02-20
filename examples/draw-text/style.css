@@ -7,6 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .greensock,
@@ -28,9 +29,30 @@ body {
   margin-bottom: 3em;
 }
 .track-completion {
+  position: relative;
   width: 0%;
   height: 100%;
   background-color: bisque;
+}
+.track-percentage {
+  background-color: bisque;
+  position: absolute;
+  text-align: center;
+  left: calc(100% - 1.5em);
+  width: 3em;
+  font-size: 2em;
+  top: -2em;
+}
+.track-percentage::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  border-top: 0.5em solid bisque;
 }
 
 button {
