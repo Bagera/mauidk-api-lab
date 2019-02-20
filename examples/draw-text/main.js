@@ -1,5 +1,6 @@
 // animation settings
 const duration = 5;
+let tween;
 
 // Graphics to animate
 const path = document.querySelector(".greensock-text");
@@ -16,6 +17,7 @@ const animation = {
 const reverse = document.querySelector(".reverse");
 const pause = document.querySelector(".pause");
 const play = document.querySelector(".play");
+const scrubber = document.querySelector(".scrubber");
 
 // Easing
 const easingButtons = document.querySelectorAll(".easing button");
@@ -41,11 +43,12 @@ const update = () => {
   const completion = (animation.length / animation.pathLength) * 100;
   path.style.strokeDasharray = `${animation.length} ${animation.pathLength}`;
   track.style.width = `${completion}%`;
-  percent.innerHTML = `${Math.round(completion)}%`;
+  percent.innerHTML = `${Math.round(tween.progress() * 100)}%`;
+  scrubber.value = tween.progress() * 100;
 };
 
 // Init tween
-let tween = TweenMax.to(animation, duration, {
+tween = TweenMax.to(animation, duration, {
   length: animation.pathLength,
   onUpdate: update,
   ease: easing
@@ -63,6 +66,11 @@ pause.addEventListener("click", () => {
 });
 reverse.addEventListener("click", () => {
   tween.reverse();
+});
+scrubber.addEventListener("change", e => {
+  console.log(e.target.value);
+  tween.pause();
+  tween.progress(e.target.value / 100);
 });
 
 // bind easing buttons

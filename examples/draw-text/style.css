@@ -74,6 +74,11 @@ button:hover {
 button.active {
   color: bisque;
 }
+.scrubber {
+  display: block;
+  width: 100%;
+  margin: 2em auto;
+}
 
 .easing {
   margin-top: 2em;
