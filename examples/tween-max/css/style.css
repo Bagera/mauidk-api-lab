@@ -1,0 +1,69 @@
+body, html {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.dna-rainbow-wrap ul {
+  height: 250px;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 240px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+  pointer-events: none;
+}
+.dna-rainbow-wrap ul li {
+  position: relative;
+  margin: 5px 0 0;
+  padding: 0;
+  display: inline-block;
+  background: #FF0006;
+  width: 5%;
+  height: 80px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.foot{
+  width:59px;  height:24px;
+  position: fixed;
+  opacity:0.7;
+  background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/183204/foot.png");
+  background-size:100% 100%;
+  
+}
+
+
+nav {
+  margin-top: 100px;
+  text-align: center;
+}
+nav ul {
+  display: inline-block;
+  font-size: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+}
+nav li a {
+  font-family: Arial;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 20px;
+  font-size: 14px;
+  color: #6a6a6a;
+  text-decoration: none;
+  transition: .5s all;
+  border-radius: 5px;
+}
+nav li a:hover {
+  color: #f00;
+  text-shadow: 0 0 5px #f00;
+  box-shadow: 0 0 15px #f00;
+}
