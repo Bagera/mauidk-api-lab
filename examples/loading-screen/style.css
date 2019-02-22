@@ -1,0 +1,30 @@
+body {
+  background-color:#000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+H1 {
+ font-size: 72px;
+ font-family: Helvetica;
+ color: #fff;
+
+}
+
+.boxes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 30em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  height: 4em;
+  width: 4em;
+  background-color:#fff;
+}
