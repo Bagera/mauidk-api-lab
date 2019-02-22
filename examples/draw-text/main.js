@@ -57,41 +57,43 @@ const update = () => {
   }
 };
 
-// Init tween
-tween = TweenMax.to(animation, duration, {
-  length: animation.pathLength,
-  onUpdate: update,
-  ease: easing
-});
-// pause it and update ui
-tween.pause();
-update();
+window.onload = () => {
+  // Init tween
+  tween = TweenMax.to(animation, duration, {
+    length: animation.pathLength,
+    onUpdate: update,
+    ease: easing,
+    paused: true
+  });
+  // update ui
+  update();
 
-// Bind control buttons
-play.addEventListener("click", () => {
-  tween.play();
-});
-pause.addEventListener("click", () => {
-  tween.pause();
-});
-reverse.addEventListener("click", () => {
-  tween.reverse();
-});
-scrubber.addEventListener("input", e => {
-  tween.pause();
-  tween.progress(e.target.value / 100);
-});
+  // Bind control buttons
+  play.addEventListener("click", () => {
+    tween.play();
+  });
+  pause.addEventListener("click", () => {
+    tween.pause();
+  });
+  reverse.addEventListener("click", () => {
+    tween.reverse();
+  });
+  scrubber.addEventListener("input", e => {
+    tween.pause();
+    tween.progress(e.target.value / 100);
+  });
 
-// Bind easing buttons
-easingButtons.forEach((button, i) => {
-  button.addEventListener("click", () => {
-    tween.updateTo({ ease: easingFuncs[i] });
-    easingButtons.forEach((button, j) => {
-      if (i === j) {
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
-      }
+  // Bind easing buttons
+  easingButtons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+      tween.updateTo({ ease: easingFuncs[i] });
+      easingButtons.forEach((button, j) => {
+        if (i === j) {
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      });
     });
   });
-});
+};
